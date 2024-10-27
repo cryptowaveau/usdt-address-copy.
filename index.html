@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy USDT Address</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #usdtAddress { width: 100%; padding: 8px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Alamat USDT</h2>
+    <input type="text" value="TUaPiDFx8L1jDrjY4iEnZ8DYVheDGyJAuk" id="usdtAddress" readonly>
+    <br>
+    <button onclick="copyToClipboard()">Coppy Address</button>
+
+    <script>
+    function copyToClipboard() {
+        var copyText = document.getElementById("usdtAddress");
+        copyText.select();
+        document.execCommand("copy");
+        alert("USDT address copied successfully!");
+    }
+    </script>
+</body>
+</html>
